@@ -1,0 +1,38 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.field span {
+    font-size: 20px;
+    color: #c3b384;
+}
+
+.field input {
+    width: 300px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    background-color: #1e1e1e;
+    color: #e8eaed;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input::placeholder {
+    color: #6f7378;
+}
+
+.field input:focus {
+    border-color: #8ab4f8;
+    box-shadow: 0 0 0 1px rgba(138, 180, 248, 0.4);
+}
+
+.error {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #f01919;
+}

@@ -4,7 +4,7 @@ import { prisma } from "../prisma";
 export const quizzesRouter = Router();
 
 // GET /quizzes 
-quizzesRouter.get("/", async (_req, res) => {
+quizzesRouter.get("/quizzes", async (_req, res) => {
     const quizzes = await prisma.quiz.findMany({
         orderBy: { createdAt: "desc" },
         select: {
@@ -24,7 +24,7 @@ quizzesRouter.get("/", async (_req, res) => {
 });
 
 // GET /quizzes/:id 
-quizzesRouter.get("/:id", async (req, res) => {
+quizzesRouter.get("/quizzes/:id", async (req, res) => {
     const quiz = await prisma.quiz.findUnique({
         where: { id: req.params.id },
         include: {
@@ -42,7 +42,7 @@ quizzesRouter.get("/:id", async (req, res) => {
 });
 
 // POST /quizzes 
-quizzesRouter.post("/", async (req, res) => {
+quizzesRouter.post("/quizzes", async (req, res) => {
     const { title, questions } = req.body as {
         title?: string;
         questions?: any[];
@@ -85,7 +85,7 @@ quizzesRouter.post("/", async (req, res) => {
 });
 
 // DELETE /quizzes/:id 
-quizzesRouter.delete("/:id", async (req, res) => {
+quizzesRouter.delete("/quizzes/:id", async (req, res) => {
     const id = req.params.id;
 
     const quiz = await prisma.quiz.findUnique({ where: { id } });

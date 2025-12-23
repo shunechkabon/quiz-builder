@@ -1,0 +1,33 @@
+.questionsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+}
+
+.questionsHeader h3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #c3b384;
+}
+
+.questionsHeader button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #cbab2c;
+    background: transparent;
+    color: #cbab2c;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease, border .3s ease;
+}
+
+.questionsHeader button:hover {
+    color: #cb812c;
+    border: 1px solid #cb812c;
+}
+
+.questionsHeader button:active {
+    color: #cb812c;
+    border: 1px solid #cb812c;
+}

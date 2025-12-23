@@ -1,0 +1,67 @@
+.page {
+    padding: 24px;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 12px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: grid;
+    gap: 12px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid #ecdc9f;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.titleRow {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 16px;
+}
+
+.meta {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.deleteBtn {
+    border: 1px solid #cbab2c;
+    background: transparent;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border .3s ease;
+}
+
+.deleteBtn:hover {
+    border: 1px solid #cb812c;
+}
+
+.deleteBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

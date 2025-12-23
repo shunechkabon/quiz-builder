@@ -1,0 +1,93 @@
+.optionsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.optionsHeader span {
+    font-size: 14px;
+    color: #9aa0a6;
+}
+
+.optionsHeader button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #cbab2c;
+    background: transparent;
+    color: #cbab2c;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease, border .3s ease;
+}
+
+.optionsHeader button:hover,
+.optionsHeader button:active {
+    color: #cb812c;
+    border: 1px solid #cb812c;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.optionRow {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.optionRow input[type='text'],
+.optionRow input:not([type]) {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    background-color: #1e1e1e;
+    color: #e8eaed;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.optionRow input::placeholder {
+    color: #6f7378;
+}
+
+.optionRow input:focus {
+    border-color: #8ab4f8;
+    box-shadow: 0 0 0 1px rgba(138, 180, 248, 0.4);
+}
+
+.optionRow button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: transparent;
+    color: #e8eaed;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #e8eaed;
+}
+
+.optionRow button:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: #666;
+}
+
+.optionRow button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #333;
+}
